@@ -11,7 +11,7 @@ class Calc {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите значение");
         String text = sc.nextLine().toUpperCase();
-
+        text = text.replace(" ", "");
         try {
             if (Validate.isArOrRom(text)) {
                 Function.metodRome(text);
@@ -21,6 +21,9 @@ class Calc {
             }
         } catch (IllegalArgumentException ex) {
             System.out.println("Вы ввели значение не правильно");
+        }
+        catch (Exception e) {
+            System.out.println("В римских чисел не бывает значение меньше 1");
         }
     }
 }

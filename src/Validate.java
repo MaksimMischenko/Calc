@@ -13,7 +13,8 @@ public class Validate {
      * @param number арабская цифра
      * @return римская цифра
      */
-    static String convertIntegerToRoman(int number) {
+    static String convertIntegerToRoman(int number) throws Exception {
+        if (number <= 0)  throw  new Exception();
         int[] numbers = {1, 4, 5, 9, 10, 40, 50, 90, 100};
         String[] letters = {"I", "IV", "V", "IX", "X", "XL",  "L", "XC", "C"};
         StringBuilder romanValue = new StringBuilder();

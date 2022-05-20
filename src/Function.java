@@ -10,7 +10,6 @@ public class Function {
         int y;
 
         String calculate = text;
-        calculate = calculate.replace(" ", "" );
         char[] value = calculate.toCharArray();
         String delimetr = String.valueOf(Validate.getDel(value));
         String spdel = Validate.splitDel(delimetr.toCharArray()[0]);
@@ -32,7 +31,7 @@ public class Function {
      *
      * @param text строка введенная с клавиатуры
      */
-    public static void metodRome(String text) {
+    public static void metodRome(String text) throws Exception {
         Validate.count = 0;
         Validate.countRome = 0;
         if (Validate.isArOrRom(text)) {
@@ -40,7 +39,6 @@ public class Function {
 
             int x = 0;
             int y = 0;
-            text = text.replaceAll(" ", "");
             char[] value = text.toCharArray();
             Validate.count = 0;
             String delimetr = String.valueOf(Validate.getDel(value));
